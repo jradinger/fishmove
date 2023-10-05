@@ -1,0 +1,11 @@
+export(fishmove,
+		pdk,
+		fishmove.query,
+		fishmove.estimate)
+
+import(ggplot2,
+		plyr)
+importFrom(MASS,fitdistr)
+importFrom(boot,boot,boot.ci)
+S3method(print, fishmove)
+S3method(summary, fishmove)

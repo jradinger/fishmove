@@ -1,0 +1,17 @@
+citHeader("To cite package 'fishmove' in publications use:")
+
+vers <- paste("R package 'fishmove', version ", meta$Version)
+
+citEntry(entry="Article",
+         title = "Patterns and predictors of fish dispersal in rivers",
+         author = personList(as.person("J. Radinger"),
+			as.person("C. Wolter")),
+		 journal = "Fish and Fisheries",
+         year         = 2014,
+         url          = "http://dx.doi.org/10.1111/faf.12028",
+         note = vers,
+         textVersion = 
+         paste("Radinger, J. and Wolter, C. (2014).", 
+               "Patterns and predictors of fish dispersal in rivers.",
+               "Fish and Fisheries.  15:456-473")
+)
