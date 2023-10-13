@@ -4,7 +4,7 @@
 ###############################################################################
 
 
-#Function for queryinf fish dispersal kernel (reverse of fishmove)
+#Function for querying fish dispersal kernel (reverse of fishmove)
 fishmove.query <-function(fishmove,p=0.67,dist=NA,fromto=NA,prob=NA,reach=NA,w=1,level="fit",...){
   
     #check of dimensions of fishmove
@@ -25,10 +25,12 @@ fishmove.query <-function(fishmove,p=0.67,dist=NA,fromto=NA,prob=NA,reach=NA,w=1
       out <- f(dist=(abs(dist))*-1)
     }
     
-    #if probability between two distancess is queried 
-    if(!is.na(fromto)){
-      if(!is.vector(fromto) && length(fromto)==2){stop("Wrong format for fromto provided. Needs vector of length = 2")}
-      out <- abs(f(dist=fromto[1])- f(dist=fromto[2])) # is abs here the correct way?
+    #if probability between two distances is queried 
+    if (sum(!is.na(fromto))>0) {
+      if ((!is.vector(fromto) && length(fromto) == 2 )| (sum(!is.na(fromto))!=2)) {
+        stop("Wrong format for fromto provided. Needs vector of length = 2")
+      }
+      out <- abs(f(dist = fromto[1]) - f(dist = fromto[2]))
     }
     
     #if distance is queried based on a probability

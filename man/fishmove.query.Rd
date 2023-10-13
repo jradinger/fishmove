@@ -25,7 +25,7 @@ fishmove.query(fishmove,p=0.67,dist=NA,fromto=NA,prob=NA,reach=NA,w=1,level="fit
 	Optional argument for distance (distance from source) where the user wants to know the kernel probability (height of the dispersal density kernel)
 	}
   \item{fromto}{
-	  Optional argument for a segment (defined by from distance - to distance) where the user wants to know the cumulative kernel probability (Integral: area under dispersal density kernel between from and to.)
+	  Optional argument for a segment (defined by from distance - to distance) where the user wants to know the cumulative kernel probability (Integral: area under dispersal density kernel between from and to). fromto is provided as vector of two values e.g. fromto = c(0,100)
 	}
   \item{prob}{
 	Optional argument: Reverse argument of distance/from to. Probability is provided and distance from source is calculated. Argument used in combination with \code{reachlength}.
